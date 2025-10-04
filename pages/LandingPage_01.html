@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soud - Minimalist Anchor</title>
+    
+    <style>
+        /* --- FONT FACE --- */
+        @font-face {
+            font-family: 'IRANSansX';
+            src: url('https://shangulipus.github.io/SoudConfig/IRANSansXMedium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* --- COLOR VARIABLES & THEME --- */
+        :root {
+            --primary-color: #00BFFF; /* Electric Blue/Cyan for highlights */
+            --highlight-red: #FF4136; /* Bright Red for loss aversion */
+            --text-color: #f0f0f0;
+            --background-color: #000000; /* Pure Black base */
+            --dark-gray: #0d0d0d;
+            --dark-blue-mid: #00172D;
+            --cta-color: #00BFFF;
+        }
+
+        /* --- GLOBAL STYLES & RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IRANSansX', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+            direction: rtl; 
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        p, li {
+            font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+        }
+
+        .highlight-red {
+            color: var(--highlight-red);
+            font-weight: bold;
+        }
+
+        .question {
+            font-size: clamp(1.6rem, 4vw, 2rem);
+            font-weight: bold;
+            margin-top: 3rem;
+            color: var(--primary-color);
+        }
+
+        /* --- LAYOUT - SECTION CONTAINER (Text-First) --- */
+        .section-container {
+            min-height: 100vh; /* Minimum height for scrollability */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10vh 5%;
+            position: relative;
+        }
+
+        /* Minimal Section Content: Max width for readability, centered text */
+        .minimal-section-content {
+            width: 100%;
+            max-width: 800px; /* Optimal width for reading long form content */
+            text-align: center;
+            padding: 0;
+        }
+
+        /* SECTION BACKGROUNDS (Subtle shifts) */
+        #section-1 { background-color: var(--background-color); }
+        #section-2 { background-color: var(--dark-blue-mid); }
+        #section-3 { background-color: var(--background-color); } 
+        #section-4 { background-color: var(--dark-blue-mid); } 
+        #section-5 { background-color: var(--background-color); }
+
+        /* List for Section 2 (Highly visible steps) */
+        .steps-list {
+            list-style: none; 
+            padding: 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .steps-list li {
+            font-size: clamp(1.2rem, 4vw, 1.6rem);
+            background-color: var(--dark-gray);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            margin: 1.5rem auto;
+            max-width: 500px;
+        }
+
+        /* Image Styling for Testimonial */
+        .testimonial-image {
+            width: 100%;
+            max-width: 350px; 
+            height: auto;
+            margin-top: 2rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+        }
+
+        /* --- CTA BUTTON STYLING --- */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--cta-color), #008cff);
+            color: white;
+            padding: 20px 60px; /* Larger button for focus */
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 3rem;
+            box-shadow: 0 4px 25px rgba(0, 191, 255, 0.6);
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: clamp(1.5rem, 5vw, 2rem);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 40px rgba(0, 191, 255, 0.9);
+        }
+        
+        /* --- FOOTER STYLING --- */
+        .site-footer {
+            background-color: var(--dark-gray); 
+            color: #888; 
+            padding: 2rem 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            direction: rtl; 
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .site-footer p {
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin: 0 0.75rem; 
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .separator {
+            color: #444; 
+            margin: 0 0.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <!-- SECTION 1: The Emotional and Financial Cost (Problem) -->
+        <section class="section-container" id="section-1">
+            <div class="minimal-section-content">
+                <h1>
+                    هر دقیقه، یه <span class="highlight-red">قیمت</span> داره.
+                </h1>
+                <p>
+                    اعتیاد به گوشی فقط وقتت رو نمی‌دزده؛ داره پتانسیل کسب درآمد و رشدت رو نابود می‌کنه. این یه هزینه واقعی‌ئه که هر روز داری پرداخت می‌کنی.
+                </p>
+                <p>
+                    این بار دیگه برای ترک کردن نمی‌خوایم بهت بگیم «اراده کن». می‌خوایم یه راهی بذاریم که شکست، واقعاً دردناک باشه.
+                </p>
+                <p class="question">چقدر حاضری ببازی تا برنده شی؟</p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: The Mechanism (Solution Steps) -->
+        <section class="section-container" id="section-2">
+            <div class="minimal-section-content">
+                <h2>
+                    <span class="highlight-red">تنها راه ترک</span>: ایجاد عواقب واقعی.
+                </h2>
+                <p>
+                    اراده ضعیف نیست، بلکه سیستم‌های قدیمی ضعیف‌اند. سود تنها سیستمیه که انگیزه رو با **ترس از دست دادن پول** فعال می‌کنه.
+                </p>
+                <ul class="steps-list">
+                    <li>
+                        <span class="highlight">۱. گرو گذاشتن</span>: مبلغی رو به عنوان تعهد کنار بذار.
+                    </li>
+                    <li>
+                        <span class="highlight">۲. شروع چالش</span>: محدودیت‌هات رو تعیین کن (مثلاً، کمتر از ۳۰ دقیقه اینستاگرام).
+                    </li>
+                    <li>
+                        <span class="highlight-red">۳. شکست</span>: اگه محدودیت رو بشکنی، پولت رو **از دست می‌دی**.
+                    </li>
+                    <li>
+                        <span class="highlight">۴. موفقیت</span>: اگه برنده شی، پولت کاملاً برمی‌گرده.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION 3: The Psychology (Effectiveness Argument) -->
+        <section class="section-container" id="section-3">
+            <div class="minimal-section-content">
+                <h2>
+                    نیروی <span class="highlight-red">ترس از باختن</span>، قوی‌تر از هر لذتی.
+                </h2>
+                <p>
+                    لذت کوتاه‌مدت شبکه‌های اجتماعی <span class="highlight">ارزش پولت رو</span> نداره. ما اینو نمی‌گیم، مغزت می‌گه!
+                </p>
+                <p>
+                    روانشناسی ثابت کرده که مغز انسان، درد **باختن** رو دو برابر قوی‌تر از حس **بردن** حس می‌کنه. ما از این قدرت روانی برای موفقیت تو استفاده می‌کنیم. این همون **لنگر روانیه** که نیاز داری.
+                </p>
+                <p class="question">بذار ترست، نجاتت بده.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Testimonial (Proof with single image) -->
+        <section class="section-container" id="section-4">
+            <div class="minimal-section-content">
+                <h2>
+                    می‌خوای <span class="highlight">مطمئن شی</span> که کار می‌کنه؟
+                </h2>
+                <p>
+                    این نتیجه یکی از کاربرای صعوده که با چالش پول، بازی رو برای همیشه عوض کرده. دیگه وقتش رو هدر نمی‌ده و داره روی اهدافش تمرکز می‌کنه.
+                </p>
+                <!-- Testimonial Image -->
+                <img class="testimonial-image" src="https://shangulipus.github.io/SoudConfig/img%2005.png" alt="تصویر آمار کاهش یافته زمان سپری شده در گوشی">
+                <p class="question">ساعت‌های زندگیت رو پس بگیر.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 5: The Commitment (CTA) -->
+        <section class="section-container" id="section-5">
+            <div class="minimal-section-content">
+                <h2>
+                    تعهد بده. <span class="highlight-red">یا ببر یا بباز.</span>
+                </h2>
+                <p>
+                    برای اولین بار، با یه قرارداد واقعی به زندگی بهتر خودت «بله» بگو. ریسک کن تا رشد کنی و زندگی که لایقشی رو پس بگیری.
+                </p>
+                <a href="#" class="cta-button">
+                    همین حالا تعهد بده
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Soud App. تمام حقوق محفوظ است.</p>
+            <div class="footer-links">
+                <a href="#">تماس با ما</a>
+                <span class="separator">|</span>
+                <a href="#">سیاست حفظ حریم خصوصی</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
