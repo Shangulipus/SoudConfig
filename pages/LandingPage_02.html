@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soud - Anchor Your Success</title>
+    
+    <style>
+        /* --- FONT FACE --- */
+        @font-face {
+            font-family: 'IRANSansX';
+            src: url('https://shangulipus.github.io/SoudConfig/IRANSansXMedium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* --- COLOR VARIABLES & THEME --- */
+        :root {
+            --primary-color: #00BFFF; /* Electric Blue/Cyan for highlights */
+            --highlight-red: #FF4136; /* Bright Red for loss aversion */
+            --text-color: #f0f0f0;
+            --background-color: #000000; /* Pure Black base */
+            --dark-gray: #0d0d0d;
+            --dark-blue-base: #000B18; 
+            --dark-blue-mid: #00172D;
+            --cta-color: #00BFFF;
+        }
+
+        /* --- GLOBAL STYLES & RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IRANSansX', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+            direction: rtl; 
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 0.75rem;
+        }
+
+        h2 {
+            font-size: clamp(1.7rem, 4.5vw, 3rem);
+            margin-bottom: 0.75rem;
+        }
+
+        p, li {
+            font-size: clamp(1rem, 3.5vw, 1.3rem);
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+        }
+
+        .highlight-red {
+            color: var(--highlight-red);
+            font-weight: bold;
+        }
+
+        .question {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+
+        /* --- LAYOUT - SECTION CONTAINER --- */
+        .section-container {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* SECTION GRADIENTS (Dark, Moody Transitions) */
+        #section-1 { background: linear-gradient(180deg, var(--dark-blue-base) 0%, var(--background-color) 100%); }
+        #section-2 { background: linear-gradient(180deg, var(--background-color) 0%, var(--dark-blue-base) 100%); }
+        #section-3 { background: linear-gradient(180deg, var(--dark-blue-base) 0%, var(--dark-blue-mid) 100%); }
+        #section-4 { background: linear-gradient(180deg, var(--dark-blue-mid) 0%, var(--background-color) 100%); }
+
+
+        .content-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column; /* Mobile: Stacks vertically */
+            justify-content: flex-start;
+            align-items: center;
+            padding: 5vh 5% 0 5%;
+            position: relative;
+        }
+
+        /* Text Content Styling */
+        .text-content {
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 650px;
+            text-align: center; 
+            padding-top: 5vh;
+            padding-bottom: 10px;
+            z-index: 10;
+        }
+        
+        /* List for Section 2 (Plain, centered text) */
+        .steps-list {
+            list-style: none; 
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .steps-list li {
+            margin-bottom: 0.75rem;
+            font-size: clamp(1.1rem, 4vw, 1.4rem);
+        }
+
+        /* Image Content Styling (Mobile First) */
+        .image-content {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            bottom: 0; 
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 5;
+        }
+
+        .image-content img:not(.arrow) {
+            width: 100%;
+            max-width: 500px; 
+            height: auto;
+            object-fit: contain;
+            align-self: flex-end; 
+        }
+
+        /* Arrow Styling (Visible and centered on all views) */
+        .arrow {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%); 
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            opacity: 0.5;
+            animation: bounce 2s infinite;
+            z-index: 15;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+            40% { transform: translate(-50%, -5px); }
+            60% { transform: translate(-50%, -2px); }
+        }
+
+        /* --- CTA BUTTON STYLING --- */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--cta-color), #008cff);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 191, 255, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 1.35rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 191, 255, 0.7);
+        }
+        
+        /* --- FOOTER STYLING --- */
+        .site-footer {
+            background-color: var(--dark-gray); 
+            color: #888; 
+            padding: 2rem 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            direction: rtl; 
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .site-footer p {
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin: 0 0.75rem; 
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .separator {
+            color: #444; 
+            margin: 0 0.2rem;
+        }
+
+
+        /* --- MEDIA QUERY FOR PC/DESKTOP (Side-by-Side Layout) --- */
+        @media (min-width: 768px) {
+            .content-wrapper {
+                flex-direction: row; 
+                justify-content: space-between;
+                align-items: flex-end; 
+                padding: 0 5%;
+            }
+
+            .text-content {
+                width: 45%;
+                max-width: none;
+                padding: 0;
+                padding-bottom: 10vh; 
+                order: 1; /* Puts text on the right side (RTL) */
+            }
+
+            .image-content {
+                position: static;
+                width: 55%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start; /* Snapped to bottom-left (RTL) */
+                align-items: flex-end;
+                padding-bottom: 0;
+                order: 2; /* Puts images on the left side (RTL) */
+            }
+
+            .image-content img:not(.arrow) {
+                width: auto; 
+                max-height: 80vh; 
+                max-width: 100%;
+                align-self: flex-end; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <!-- SECTION 1: The Cost of Time (Problem) -->
+        <section class="section-container" id="section-1">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h1>
+                        هر دقیقه، یه <span class="highlight-red">قیمت</span> داره.
+                    </h1>
+                    <p>
+                        اعتیاد به گوشی فقط وقتت رو نمی‌دزده؛ داره پتانسیل کسب درآمد و رشدت رو نابود می‌کنه. این یه هزینه واقعی‌ئه.
+                    </p>
+                    <p class="question">چقدر حاضری ببازی؟</p>
+                </div>
+                <div class="image-content">
+                    <img src="https://shangulipus.github.io/SoudConfig/img%2001.png" alt="تصویر یک شخص در دام اعتیاد به گوشی">
+                    <img class="arrow" src="https://shangulipus.github.io/SoudConfig/arrow1_b.png" alt="پایین">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: The Financial Consequence (Solution Mechanic) -->
+        <section class="section-container" id="section-2">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h2>
+                        <span class="highlight-red">تنها راه ترک</span>: ایجاد عواقب واقعی.
+                    </h2>
+                    <p>
+                        اراده ضعیف نیست، بلکه سیستم‌های قدیمی ضعیف‌اند. سود تنها سیستمیه که انگیزه رو با <span class="highlight-red">ترس از دست دادن پول</span> فعال می‌کنه.
+                    </p>
+                    <ul class="steps-list">
+                        <li>
+                            <span class="highlight">۱. گرو گذاشتن</span>: مبلغی رو به عنوان تعهد کنار بذار.
+                        </li>
+                        <li>
+                            <span class="highlight">۲. شروع چالش</span>: محدودیت‌هات رو تعیین کن.
+                        </li>
+                        <li>
+                            <span class="highlight-red">۳. شکست</span>: اگه محدودیت رو بشکنی، پولت رو از دست می‌دی.
+                        </li>
+                        <li>
+                            <span class="highlight">۴. موفقیت</span>: اگه برنده شی، پولت کاملاً برمی‌گرده.
+                        </li>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <img src="https://shangulipus.github.io/SoudConfig/img%2002.png" alt="تصویر قرارداد یا تعهد مالی">
+                    <img class="arrow" src="https://shangulipus.github.io/SoudConfig/arrow1_b.png" alt="پایین">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: The Psychology (Effectiveness) -->
+        <section class="section-container" id="section-3">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h2>
+                        نیروی <span class="highlight-red">ترس از باختن</span>، قوی‌تر از هر لذتی.
+                    </h2>
+                    <p>
+                        لذت کوتاه‌مدت شبکه‌های اجتماعی <span class="highlight">ارزش پولت رو</span> نداره. مغزت باختن رو دو برابر دردناک‌تر از بردن حس می‌کنه. این همون لنگر روانیه که نیاز داری.
+                    </p>
+                    <p class="question">از همین امروز بازی رو عوض کن.</p>
+                </div>
+                <div class="image-content">
+                    <img src="https://shangulipus.github.io/SoudConfig/img%2003.png" alt="تصویر مقایسه پول در دست و گوشی">
+                    <img class="arrow" src="https://shangulipus.github.io/SoudConfig/arrow1_b.png" alt="پایین">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: The Commitment (CTA) -->
+        <section class="section-container" id="section-4">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h2>
+                        تعهد بده. <span class="highlight-red">یا ببر یا بباز.</span>
+                    </h2>
+                    <p>
+                        برای اولین بار، با یه قرارداد واقعی به زندگی بهتر خودت «بله» بگو. ریسک کن تا رشد کنی و زندگی که لایقشی رو پس بگیری.
+                    </p>
+                    <a href="#" class="cta-button">
+                        همین حالا تعهد بده
+                    </a>
+                </div>
+                <div class="image-content">
+                    <img src="https://shangulipus.github.io/SoudConfig/img%2004.png" alt="تصویر شخص متحول شده">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Soud App. تمام حقوق محفوظ است.</p>
+            <div class="footer-links">
+                <a href="#">تماس با ما</a>
+                <span class="separator">|</span>
+                <a href="#">سیاست حفظ حریم خصوصی</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
