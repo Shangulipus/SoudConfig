@@ -108,11 +108,24 @@
             </div>
         </section>
 
-            <div style="height: 400px;">
-        <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1' alt='' style='cursor:pointer' code='uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'></a>
-    </div>
+
     </main>
 
+    <footer class="site-footer">
+        <div class="footer-content">
+
+                <div style="height: 300px;">
+        <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1' alt='' style='cursor:pointer' code='uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'></a>
+    </div>
+
+            <div class="footer-links">
+                <a href="#">تماس با ما</a>
+            </div>
+            <div style="height: 50px;"></div>
+            <p>&copy; 2025 Soud App. تمام حقوق محفوظ است.</p>
+        </div>
+    </footer>
+    
 </body>
 <style>
 @font-face {
@@ -397,9 +410,55 @@ p, li {
         text-align: center;
     }
 }
+/* Footer Styling */
+.site-footer {
+    background-color: #0d0d0d; /* A slightly darker shade than the body background */
+    color: #b0b0b0; /* Lighter grey for text to stand out slightly */
+    padding: 2rem 5%;
+    text-align: center;
+    font-family: 'IRANSansX', sans-serif;
+    font-size: 0.9rem;
+    direction: rtl; /* Ensure RTL for footer text */
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.site-footer p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem; /* Slightly larger for main text */
+}
+
+.footer-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 0.5rem; /* Space links out */
+}
+
+.footer-links a:hover {
+    color: var(--primary-color); /* Use your primary highlight color on hover */
+}
+
+.separator {
+    color: #707070; /* A neutral color for the separator */
+    margin: 0 0.2rem;
+}
+
+/* Adjust footer for desktop to potentially align differently if needed, 
+   but for "nothing fancy" centered is usually fine. */
+@media (min-width: 768px) {
+    .site-footer p {
+        margin-bottom: 0.5rem; /* Reduce space on desktop */
+    }
+}
+    
 </style>
 
 </html>
+
 
 
 
