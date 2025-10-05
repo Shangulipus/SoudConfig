@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صعود | تضمین ترک اعتیاد به گوشی با قدرت پول</title>
+    
+    <style>
+        /* --- FONT FACE --- */
+        @font-face {
+            font-family: 'IRANSansX';
+            src: url('https://shangulipus.github.io/SoudConfig/IRANSansXMedium.ttf') format('truetype');
+            font-weight: 500; /* Medium weight is loaded */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* --- COLOR VARIABLES & THEME --- */
+        :root {
+            --primary-color: #00BFFF; /* Electric Blue/Cyan for highlights */
+            --highlight-red: #FF4136; /* Bright Red for loss aversion */
+            --text-color: #f0f0f0;
+            --background-color: #000000; /* Pure Black base */
+            --dark-gray: #0d0d0d;
+            --dark-blue-mid: #00172D;
+            --cta-color: #00BFFF;
+        }
+
+        /* --- GLOBAL STYLES & RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IRANSansX', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+            direction: rtl; 
+            font-weight: normal; /* Set default body text to normal weight */
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+            font-weight: bold; /* Keep H1 bold */
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            font-weight: bold; /* Keep H2 bold */
+        }
+
+        p, li {
+            font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: normal; /* Ensure paragraph and list items are normal weight */
+        }
+
+        .highlight {
+            color: var(--primary-color);
+        }
+
+        .highlight-red {
+            color: var(--highlight-red);
+            font-weight: bold;
+        }
+
+        .question {
+            font-size: clamp(1.6rem, 4vw, 2rem);
+            font-weight: bold;
+            margin-top: 3rem;
+            color: var(--primary-color);
+        }
+        
+        /* --- LAYOUT - SECTION CONTAINER (Text-First) --- */
+        .section-container {
+            min-height: 100vh; 
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10vh 5%;
+            position: relative;
+        }
+
+        /* Minimal Section Content: Max width for readability, centered text */
+        .minimal-section-content {
+            width: 100%;
+            max-width: 800px; 
+            text-align: center;
+            padding: 0;
+        }
+
+        /* SECTION BACKGROUNDS */
+        #section-1 { background-color: var(--dark-blue-mid); } /* Highlight mechanism section */
+        #section-2 { background-color: var(--background-color); } 
+        #section-3 { background-color: var(--dark-blue-mid); } 
+        #section-4 { background-color: var(--background-color); } 
+
+        /* List for Section 1 (Core Mechanism) - Very clear and distinct steps */
+        .mechanism-list {
+            list-style: none; 
+            padding: 0;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .mechanism-list li {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            background-color: var(--dark-gray);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            margin: 1.5rem auto;
+            max-width: 600px;
+            font-weight: normal; /* Changed to normal, but keep internal span bold */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            text-align: right; /* Align steps to the right */
+        }
+        
+        .mechanism-list li span {
+            font-weight: bold; /* Keep step titles bold */
+        }
+
+
+        /* Image Styling for Testimonial */
+        .testimonial-image {
+            width: 100%;
+            max-width: 350px; 
+            height: auto;
+            margin-top: 2rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+        }
+
+        /* --- CTA BUTTON STYLING --- */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--cta-color), #008cff);
+            color: white;
+            padding: 20px 60px; 
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 3rem;
+            box-shadow: 0 4px 25px rgba(0, 191, 255, 0.6);
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: clamp(1.5rem, 5vw, 2rem);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 40px rgba(0, 191, 255, 0.9);
+        }
+        
+        /* --- FOOTER STYLING --- */
+        .site-footer {
+            background-color: var(--dark-gray); 
+            color: #888; 
+            padding: 2rem 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            direction: rtl; 
+            font-weight: normal;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .site-footer p {
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            font-weight: normal;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin: 0 0.75rem; 
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .separator {
+            color: #444; 
+            margin: 0 0.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <!-- SECTION 1: CORE MECHANISM -->
+        <section class="section-container" id="section-1">
+            <div class="minimal-section-content">
+                <h1>
+                    <span class="highlight">صعود</span>: اپلیکیشنی که مجبورت می‌کنه گوشی رو <span class="highlight-red">بذاری کنار</span>.
+                </h1>
+                <p>
+                    این روشیه که <strong class="highlight">اراده</strong> تو رو به قدرت واقعی می‌رسونه.
+                </p>
+                
+                <ul class="mechanism-list">
+                    <li style="text-align: center;">
+                        <span class="highlight">مرحله اول: تنظیم چالش</span>
+                        <p style="font-size: 1.2rem; font-weight: normal; margin: 0.5rem 0 0 0;">
+                            انتخاب اپلیکیشنی که می‌خوای محدودش کنی (مثلاً اینستاگرام).
+                        </p>
+                        <p style="font-size: 1.2rem; font-weight: normal; margin: 0.5rem 0 0 0;">
+                            تعیین سقف استفاده (مثلاً نهایتاً ۳۰ دقیقه).
+                        </p>
+                        <p style="font-size: 1.2rem; font-weight: normal; margin: 0.5rem 0 0 0;">
+                            انتخاب مدت زمان چالش (مثلاً ۲۴ ساعت آینده).
+                        </p>
+                    </li>
+                    <li style="text-align: center;">
+                        <span class="highlight">مرحله دوم: تعهد مالی</span>
+                        <p style="font-size: 1.2rem; font-weight: normal; margin: 0.5rem 0 0 0;">
+                            یه مبلغ رو به عنوان تعهد گرو می‌ذاری.
+                        </p>
+                    </li>
+                    <li style="text-align: center;">
+                        <span class="highlight-red">مرحله سوم: نتیجه چالش</span>
+                        <p style="font-size: 1.2rem; font-weight: normal; margin: 0.5rem 0 0 0;">
+                            <strong class="highlight-red">اگه محدودیت رو بشکنی:</strong> تمام پول گرو گذاشته شده <span class="highlight-red">از دست می‌دی</span>.
+                        </p>
+                        <p style="font-size: 1.2rem; font-weight: normal; margin: 0.5rem 0 0 0;">
+                            <strong class="highlight">اگه موفق شی:</strong> کل مبلغ کاملاً بهت برمی‌گرده.
+                        </p>
+                    </li>
+                </ul>
+
+                <p style="font-size: 1.6rem; margin-top: 4rem;">
+                    این بازی یک «<strong class="highlight">دو سر بُرد</strong>» (Win-Win) واقعی است:
+                    <br>
+                    <strong class="highlight">اگه برنده شی، پولت رو می‌گیری و مهم‌تر از همه، ثابت می‌کنی که می‌تونی.</strong>
+                </p>
+
+            </div>
+        </section>
+
+        <!-- SECTION 2: The Problem and Psychology (WHY) -->
+        <section class="section-container" id="section-2">
+            <div class="minimal-section-content">
+                <h2>
+                    چطور صعود بهت کمک می‌کنه <span class="highlight">اراده‌ات</span> رو قوی کنی؟
+                </h2>
+                <p>
+                    مغزت درد <strong class="highlight-red">از دست دادن پول</strong> رو از هر لذتی قوی‌تر حس می‌کنه.
+                </p>
+                <p>
+                    در لحظه وسوسه، این ترس به جای اراده تصمیم می‌گیره تا کنترل رو برای همیشه از الگوریتم‌ها پس بگیری.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Testimonial (Proof with single image) -->
+        <section class="section-container" id="section-3">
+            <div class="minimal-section-content">
+                <h2>
+                    می‌خوای <span class="highlight">مطمئن شی</span> که جواب می‌ده؟
+                </h2>
+                <p>
+                    این نتیجه واقعی یکی از کاربرای <span class="highlight">صعودئه</span>. با چالش پول، آمار استفاده‌اش رو برای همیشه عوض کرد.
+                </p>
+                <!-- Testimonial Image -->
+                <img class="testimonial-image" src="https://shangulipus.github.io/SoudConfig/img%2005.png" alt="تصویر آمار کاهش یافته زمان سپری شده در گوشی">
+                <p class="question">ساعت‌های زندگیت رو پس بگیر.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: The Commitment (CTA) -->
+        <section class="section-container" id="section-4">
+            <div class="minimal-section-content">
+                <h2>
+                    زمان حرکت رسیده. <span class="highlight-red">تصمیم بگیر تا برنده شی.</span>
+                </h2>
+                <p>
+                    تو با خودت قرارداد می‌بندی تا بهتر شی. <span class="highlight">صعود</span>، قلم و کاغذ این تعهد رو بهت می‌ده.
+                </p>
+
+                <a href="#" class="cta-button">
+                    دانلود اپلیکیشن صعود
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2023 صعود. تمام حقوق محفوظ است.</p>
+            <div class="footer-links">
+                <a href="#">تماس با ما</a>
+                <span class="separator">|</span>
+                <a href="#">سیاست حفظ حریم خصوصی</a>
+                <span class="separator">|</span>
+                <a href="#">شرایط استفاده</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
