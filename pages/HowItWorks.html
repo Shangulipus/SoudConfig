@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صعود | مکانیزم کارکرد</title>
+    
+    <style>
+        /* --- FONT FACE (Copied from existing files) --- */
+        @font-face {
+            font-family: 'IRANSansX';
+            src: url('https://shangulipus.github.io/SoudConfig/IRANSansXMedium.ttf') format('truetype');
+            font-weight: 500; 
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* --- COLOR VARIABLES & THEME --- */
+        :root {
+            --primary-color: #00BFFF; /* Electric Blue/Cyan */
+            --highlight-red: #FF4D4D; /* Red for loss aversion */
+            --text-color: #f0f0f0;
+            --background-color: #000000; /* Pure Black base */
+            --dark-gray: #0d0d0d;
+        }
+
+        /* --- GLOBAL STYLES & RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IRANSansX', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+            direction: rtl; 
+            font-weight: normal; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0; 
+        }
+        
+        /* --- MAIN CONTENT & LAYOUT --- */
+        main {
+            padding: 4rem 5% 6rem; /* Padding top, sides, and bottom separation */
+            width: 100%;
+            max-width: 900px;
+            text-align: center; /* All text and inline elements centered */
+            flex-grow: 1; 
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem); 
+            margin-bottom: 0.5rem; 
+            line-height: 1.2;
+            font-weight: bold; 
+            color: var(--primary-color);
+        }
+
+        .intro-p {
+            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+            margin: 0 auto 3rem auto; 
+            max-width: 700px;
+            font-weight: normal;
+            color: #ccc;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .highlight-red {
+            color: var(--highlight-red);
+            font-weight: bold;
+        }
+
+        /* --- STEP-BY-STEP MECHANISM --- */
+        .mechanism-steps {
+            list-style: none;
+            padding: 0;
+            margin: 4rem auto 0 auto; /* CENTERED THE BLOCK */
+            text-align: center; 
+            display: grid;
+            gap: 2.5rem;
+            max-width: 600px; /* Limiting width for better centering appearance */
+        }
+        
+        .step-item {
+            background-color: var(--dark-gray);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            border-right: 5px solid var(--primary-color); 
+            text-align: center; /* CENTERED CONTENT WITHIN STEP BOX */
+        }
+
+        .step-item h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            justify-content: center; /* CENTERED THE STEP TITLE AND NUMBER */
+        }
+        
+        .step-item h2 span {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-right: 1rem; /* Changed margin-left to margin-right for RTL centering */
+            color: var(--highlight-red); 
+        }
+
+        .step-item p {
+            font-size: 1.1rem;
+            margin: 0;
+            max-width: none;
+            line-height: 1.8;
+            color: #ddd;
+            text-align: center; /* CENTERED THE PARAGRAPH TEXT */
+        }
+        
+        /* --- CONCLUSION BOX --- */
+        .conclusion-box {
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.1), rgba(0, 191, 255, 0.05));
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--primary-color);
+            margin: 5rem auto 0 auto; /* CENTERED THE CONCLUSION BLOCK */
+            text-align: center;
+            max-width: 700px;
+        }
+        
+        .conclusion-box p {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin: 0 auto;
+            max-width: 700px;
+        }
+
+        /* --- FUTURE FEATURE STYLING --- */
+        .future-vision {
+            padding-top: 3rem;
+            margin: 2rem auto 0 auto; /* CENTERED THE FUTURE VISION BLOCK */
+            border-top: 1px dashed #333;
+            max-width: 700px;
+        }
+        .future-vision p {
+            font-size: 1.1rem;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+
+        /* --- FOOTER STYLING (Simple and Small for a Content Page) --- */
+        .site-footer {
+            margin-top: auto; 
+            background-color: var(--dark-gray); 
+            color: #888; 
+            width: 100%;
+            padding: 2rem 5%; 
+            text-align: center;
+            font-size: 0.9rem;
+            direction: rtl; 
+        }
+        
+        .site-footer a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s;
+        }
+
+        .site-footer a:hover {
+            color: var(--primary-color);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>صعود چطور کار می‌کنه؟</h1>
+        
+        <p class="intro-p">
+            صعود به اراده‌ی تو وابسته نیست. ما با یک سیستم هوشمند، از قوی‌ترین اهرم روانشناسی استفاده می‌کنیم: ترس از دست دادن پول واقعی. این سیستم در ۴ گام ساده، تعهد تو رو ضمانت می‌کنه.
+        </p>
+
+        <div class="mechanism-steps">
+            
+            <div class="step-item">
+                <h2><span>۱.</span> قرارداد با خودت</h2>
+                <p>
+                    <strong class="highlight">برنامه</strong> و <strong class="highlight">محدودیت زمانی</strong> رو مشخص می‌کنی. مثلاً: «می‌خوام در ۲۴ ساعت آینده، بیشتر از ۳۰ دقیقه از اینستاگرام استفاده نکنم.» این یک تعهد شفاف و قابل اندازه‌گیریه.
+                </p>
+            </div>
+
+            <div class="step-item">
+                <h2><span>۲.</span> گرو گذاشتن لنگر</h2>
+                <p>
+                    مبلغی رو که دوست داری به عنوان <strong class="highlight-red">لنگر روانی</strong> عمل کنه، گرو می‌ذاری. مهم نیست مبلغ چقدره؛ مهم تأثیر روانشناختی باختن اونه. این پول، ضمانت اجرایی قرارداد تو با خودته.
+                </p>
+            </div>
+
+            <div class="step-item">
+                <h2><span>۳.</span> پایش هوشمند</h2>
+                <p>
+                    چالش شروع می‌شه. صعود به صورت کاملاً خودکار، میزان استفاده تو از اون برنامه خاص رو پایش می‌کنه. دیگه نیازی به عذاب وجدان یا محاسبه دستی نداری. سیستم، بدون قضاوت، ناظر تعهد توست.
+                </p>
+            </div>
+            
+            <div class="step-item">
+                <h2><span>۴.</span> نتیجه‌ی قطعی</h2>
+                <p>
+                    <strong class="highlight">اگه محدودیت رو بشکنی:</strong> سیستم شکست رو ثبت می‌کنه و پول گرو گذاشته شده <strong class="highlight-red">از دست می‌ره</strong>. (درد باخت، قوی‌تر از لذت اسکرول کردن بود).
+                    <br>
+                    <strong class="highlight">اگه موفق شی:</strong> کل مبلغ بلافاصله بهت برمی‌گرده و مهم‌تر از همه، <strong class="highlight">اراده‌ی خودت رو قوی‌تر کردی.</strong>
+                </p>
+            </div>
+
+        </div>
+        
+        <!-- NEW SECTION: FUTURE VISION -->
+        <div class="future-vision">
+            <p>
+                <strong class="highlight">چشم‌انداز صعود:</strong> در حال حاضر، صعود فقط برای ترک عادت‌های موبایلی به شما کمک می‌کنه. اما به زودی، قابلیت‌های جدیدی مثل ترک <strong class="highlight">عادت‌های غذایی</strong>، <strong class="highlight">ورزش روزانه</strong>، و <strong class="highlight">ساعات خواب منظم</strong> به برنامه اضافه خواهند شد تا صعود، تضمین‌کننده تمام اهداف شما باشه.
+            </p>
+        </div>
+        
+        <div class="conclusion-box">
+            <p>
+                صعود، به جای اینکه ازت بخواد با اراده بجنگی، کاری می‌کنه که <strong class="highlight">مغزت به نفع خودت تصمیم بگیره.</strong>
+            </p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div style="height: 400px;">
+            <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1' alt='' style='cursor:pointer' code='uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'></a>
+        </div>
+        <a href="/contact-us">تماس با ما</a>
+        <span>&copy; ۲۰۲۵ صعود - برنامه‌ی تمرکز.</span>
+    </footer>
+    
+</body>
+</html>

@@ -1,40 +1,10 @@
-
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صعود | برنامه‌ی رسیدن به اهداف</title>
     
-
-
-    <main style="overflow:hidden">
-        <!-- App Icon with Rounded Corners -->
-        <div class="app-icon">
-            <img src="https://shangulipus.github.io/SoudConfig/Icons/AppIcon_01.png" alt="آیکون اپلیکیشن صعود">
-        </div>
-
-        <h1>صعود</h1>
-        
-        <h2>
-            برنامه‌ای که بهت کمک می‌کنه تا <span class="highlight">به اهدافت برسی</span>.
-        </h2>
-
-        <!-- Shorter, generic description (Casual Farsi) -->
-        <p>
-            یه ابزار قدرتمند که اراده رو تبدیل به عمل می‌کنه. صعود، کاری می‌کنه که رسیدن به اهدافت قطعی شه.
-        </p>
-
-        <!-- Replaced CTA button with development status message -->
-        <div class="status-message">
-            اپلیکیشن در حال توسعه است.
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        <div style="height: 300px;">
-            <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1' alt='' style='cursor:pointer' code='uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'></a>
-        </div>
-    </footer>
-    
-
     <style>
         /* --- FONT FACE --- */
         @font-face {
@@ -52,7 +22,6 @@
             --background-color: #000000; /* Pure Black base */
             --dark-gray: #0d0d0d;
             --cta-color: #00BFFF;
-            
         }
 
         /* --- GLOBAL STYLES & RESET --- */
@@ -60,12 +29,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            
         }
 
-        html {
-            
-        }
         body {
             font-family: 'IRANSansX', sans-serif;
             background-color: var(--background-color);
@@ -83,7 +48,6 @@
             text-align: center;
             /* REMOVED PADDING: 5%; to allow footer to span 100% of viewport */
             padding: 0; 
-            
         }
         
         /* --- MAIN CONTENT SPACING --- */
@@ -93,13 +57,12 @@
             /* ADDED HORIZONTAL PADDING here to keep content from hitting screen edges */
             padding: 0 5%; 
             width: 100%;
-            
         }
 
         /* --- TYPOGRAPHY --- */
         h1 {
             /* Reduced size for a more minimal look */
-            font-size: clamp(2.5rem, 8vw, 4.5rem); 
+            font-size: clamp(2.5rem, 8vw, 4rem); 
             margin-bottom: 1.5rem; 
             line-height: 1.2;
             font-weight: bold; 
@@ -140,6 +103,28 @@
             font-weight: bold;
         }
 
+        /* --- CTA BUTTON STYLING (NEW) --- */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--cta-color);
+            color: var(--background-color);
+            text-decoration: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+            font-weight: bold;
+            margin-top: 1.5rem; /* Space from status message above */
+            margin-bottom: 2rem; /* Final bottom margin for separation from footer */
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #0099cc;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 191, 255, 0.6);
+        }
+
         /* --- STATUS MESSAGE STYLING (Replaces CTA Button) --- */
         .status-message {
             display: inline-block;
@@ -147,10 +132,11 @@
             padding: 10px 25px; 
             border: 2px solid #333; 
             border-radius: 50px;
-            margin-top: 3rem;
             font-size: clamp(1rem, 3vw, 1.3rem);
             background-color: var(--dark-gray); 
             font-weight: bold;
+            margin-top: 2rem; /* Space from description paragraph above */
+            margin-bottom: 0; /* Let the button handle the spacing below */
         }
 
 
@@ -169,5 +155,50 @@
         
         /* Removed all internal footer element styles since content is gone */
     </style>
+</head>
+<body>
+
+    <main>
+        <!-- App Icon with Rounded Corners -->
+        <div class="app-icon">
+            <img src="https://shangulipus.github.io/SoudConfig/Icons/AppIcon_01.png" alt="آیکون اپلیکیشن صعود">
+        </div>
+
+        <h1>صعود</h1>
+        
+        <h2>
+            برنامه‌ای که بهت کمک می‌کنه تا <span class="highlight">به اهدافت برسی</span>.
+        </h2>
+
+        <!-- Shorter, generic description (Casual Farsi) -->
+        <p>
+            یه ابزار قدرتمند که اراده رو تبدیل به عمل می‌کنه. صعود، کاری می‌کنه که رسیدن به اهدافت قطعی شه.
+        </p>
+
+                <!-- NEW: Button linking to the How it works page (NOW BELOW THE STATUS MESSAGE) -->
+        <a href="/how-it-works" class="cta-button">
+            صعود چطور کار می‌کنه؟
+        </a>
+        <div style="height: 20ox;"></div>
+        <!-- Status message (NOW ABOVE THE BUTTON) -->
+        <div class="status-message">
+            اپلیکیشن در حال توسعه است.
+        </div>
+
+
+
+    </main>
+
+    <footer class="site-footer">
+        <div style="height: 400px;">
+            <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1' alt='' style='cursor:pointer' code='uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'></a>
+        </div>
+        <a href="/contact-us">تماس با ما</a>
+        <span>&copy; ۲۰۲۵ صعود - برنامه‌ی تمرکز.</span>
+    </footer>
+    
+
+</body>
+</html>
 
 
