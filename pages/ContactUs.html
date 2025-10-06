@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صعود | تماس با ما</title>
+    
+    <style>
+        /* --- FONT FACE (Copied from existing files) --- */
+        @font-face {
+            font-family: 'IRANSansX';
+            src: url('https://shangulipus.github.io/SoudConfig/IRANSansXMedium.ttf') format('truetype');
+            font-weight: 500; 
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* --- COLOR VARIABLES & THEME --- */
+        :root {
+            --primary-color: #00BFFF; /* Electric Blue/Cyan */
+            --text-color: #f0f0f0;
+            --background-color: #000000; /* Pure Black base */
+            --dark-gray: #0d0d0d;
+        }
+
+        /* --- GLOBAL STYLES & RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IRANSansX', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            overflow-x: hidden;
+            direction: rtl; 
+            font-weight: normal; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0; 
+        }
+        
+        /* --- MAIN CONTENT & LAYOUT --- */
+        main {
+            padding: 4rem 5% 6rem; /* Padding top, sides, and bottom separation */
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+            flex-grow: 1; /* Allows main content to push footer down */
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem); 
+            margin-bottom: 1.5rem; 
+            line-height: 1.2;
+            font-weight: bold; 
+            color: var(--primary-color);
+        }
+
+        .description {
+            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+            margin: 0 auto 3rem auto; 
+            max-width: 600px;
+            font-weight: normal;
+        }
+
+        /* --- CONTACT DETAILS STYLING --- */
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem; /* Space between contact items */
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            background-color: var(--dark-gray);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #1a1a1a;
+            max-width: 450px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .contact-item h3 {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin-bottom: 0.75rem;
+        }
+        
+        .contact-item a {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a:hover {
+            color: #008cc9;
+        }
+        
+        .contact-item p {
+            color: #aaa;
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* --- FOOTER STYLING (Simple and Small for a Contact Page) --- */
+        .site-footer {
+            margin-top: auto; 
+            background-color: var(--dark-gray); 
+            color: #888; 
+            width: 100%;
+            padding: 2rem 5%; /* Smaller padding than the homepage footer */
+            text-align: center;
+            font-size: 0.9rem;
+            direction: rtl; 
+        }
+        
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>تماس با ما</h1>
+        
+        <p class="description">
+            ما همیشه آماده‌ایم تا صدای شما رو بشنویم. اگه سوال، پیشنهاد یا بازخوردی داری، از یکی از این راه‌ها با ما در تماس باش.
+        </p>
+
+        <div class="contact-details">
+            <!-- 1. Phone Number -->
+            <div class="contact-item">
+                <h3>تلفن</h3>
+                <!-- Placeholder Phone Number -->
+                <a href="tel:+989123456789">09231061206</a>
+            </div>
+
+            <!-- 2. Email -->
+            <div class="contact-item">
+                <h3>ایمیل</h3>
+                <!-- Placeholder Email -->
+                <a href="mailto:soudappofficial@gmail.com">soudappofficial@gmail.com</a>
+                <p>بهترین راه برای پشتیبانی فنی و سوالات عمومی.</p>
+            </div>
+
+            <!-- 3. Telegram -->
+            <div class="contact-item">
+                <h3>تلگرام</h3>
+                <!-- Placeholder Telegram ID -->
+                <a href="https://t.me/AmirRahmaniDev" target="_blank">@AmirRahmaniDev</a>
+                <p>پاسخ سریع برای هماهنگی و مسائل فوری.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div style="height: 300px;">
+            <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1' alt='' style='cursor:pointer' code='uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'></a>
+        </div>
+
+        &copy; 2025 صعود - برنامه‌ی تمرکز.
+    </footer>
+    
+</body>
+</html>
