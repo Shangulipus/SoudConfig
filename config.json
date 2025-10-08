@@ -1,5 +1,4 @@
 {
-  "status": "ok", // ok | maintanance
   "maintenance": {
     "active": false,
     "reason_en": "",
@@ -17,3 +16,5 @@
     ]
   }
 }
+
+//Temporarily hosted on https://soudconfig.alijafari-gd.workers.dev/
