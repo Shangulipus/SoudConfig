@@ -1,5 +1,19 @@
 {
-  status: "1",
-  currentVersion: "0.0.5",
-  minVersion: "0.0.2"
+  "status": "ok", // ok | maintanance
+  "maintenance": {
+    "active": false,
+    "reason_en": "",
+    "reason_fa": "",
+    "until": ""
+  },
+  "currentVersion": "0.0.5",
+  "minVersion": "0.0.2",
+  "changelog": {
+    "en": [
+      "Bug Fixes"
+    ],
+    "fa": [
+      "رفع اشکال"
+    ]
+  }
 }
