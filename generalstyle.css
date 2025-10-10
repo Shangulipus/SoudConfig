@@ -11,9 +11,9 @@ body[b-uexnwqv8r8] {
     border: none;
 }
 
-.btn-gradient:hover[b-uexnwqv8r8] {
-    opacity: 0.9;
-}
+    .btn-gradient:hover[b-uexnwqv8r8] {
+        opacity: 0.9;
+    }
 
 .skeleton-line[b-uexnwqv8r8] {
     background: linear-gradient(90deg, #444, #666, #444);
@@ -56,15 +56,15 @@ main[b-8nh1qcmraq] {
     align-items: center;
 }
 
-    .top-row[b-8nh1qcmraq] a, .top-row .btn-link[b-8nh1qcmraq] {
+    .top-row[b-8nh1qcmraq]  a, .top-row .btn-link[b-8nh1qcmraq] {
         white-space: nowrap;
         margin-left: 1.5rem;
     }
 
-.top-row a:first-child[b-8nh1qcmraq] {
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+    .top-row a:first-child[b-8nh1qcmraq] {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
 @media (max-width: 640.98px) {
     .top-row:not(.auth)[b-8nh1qcmraq] {
@@ -129,32 +129,32 @@ main[b-8nh1qcmraq] {
     padding-bottom: 0.5rem;
 }
 
-.nav-item:first-of-type[b-6hnqtzply9] {
-    padding-top: 1rem;
-}
-
-.nav-item:last-of-type[b-6hnqtzply9] {
-    padding-bottom: 1rem;
-}
-
-.nav-item[b-6hnqtzply9] a {
-    color: #d7d7d7;
-    border-radius: 4px;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    line-height: 3rem;
-}
-
-    .nav-item[b-6hnqtzply9] a.active {
-        background-color: rgba(255,255,255,0.25);
-        color: white;
+    .nav-item:first-of-type[b-6hnqtzply9] {
+        padding-top: 1rem;
     }
 
-    .nav-item[b-6hnqtzply9] a:hover {
-        background-color: rgba(255,255,255,0.1);
-        color: white;
+    .nav-item:last-of-type[b-6hnqtzply9] {
+        padding-bottom: 1rem;
     }
+
+    .nav-item[b-6hnqtzply9]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+.nav-item[b-6hnqtzply9]  a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item[b-6hnqtzply9]  a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
 
 @media (min-width: 767px) {
     .navbar-toggler[b-6hnqtzply9] {
@@ -165,7 +165,7 @@ main[b-8nh1qcmraq] {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
-
+    
     .nav-scrollable[b-6hnqtzply9] {
         /* Allow sidebar to scroll for tall menus */
         height: calc(100vh - 3.5rem);
