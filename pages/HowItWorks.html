@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صعود | مکانیزم کارکرد</title>
+    <title>صعود | مکانیزم دقیق کارکرد</title>
     
     <style>
-        /* --- FONT FACE (Copied from existing files) --- */
+        /* --- FONT FACE --- */
         @font-face {
             font-family: 'IRANSansX';
             src: url('https://shangulipus.github.io/SoudConfig/IRANSansXMedium.ttf') format('truetype');
@@ -48,10 +48,10 @@
         
         /* --- MAIN CONTENT & LAYOUT --- */
         main {
-            padding: 4rem 5% 6rem; /* Padding top, sides, and bottom separation */
+            padding: 4rem 5% 6rem; 
             width: 100%;
             max-width: 900px;
-            text-align: center; /* All text and inline elements centered */
+            text-align: center; /* All content blocks centered */
             flex-grow: 1; 
         }
 
@@ -66,7 +66,7 @@
 
         .intro-p {
             font-size: clamp(1.1rem, 3.5vw, 1.4rem);
-            margin: 0 auto 3rem auto; 
+            margin: 0 auto 4rem auto; 
             max-width: 700px;
             font-weight: normal;
             color: #ccc;
@@ -82,23 +82,36 @@
             font-weight: bold;
         }
 
+        /* New section header style */
+        .section-header {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            color: var(--primary-color);
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
         /* --- STEP-BY-STEP MECHANISM --- */
         .mechanism-steps {
             list-style: none;
             padding: 0;
-            margin: 4rem auto 0 auto; /* CENTERED THE BLOCK */
+            margin: 0 auto;
             text-align: center; 
             display: grid;
-            gap: 2.5rem;
-            max-width: 600px; /* Limiting width for better centering appearance */
+            gap: 2rem;
+            max-width: 650px; 
         }
         
         .step-item {
             background-color: var(--dark-gray);
             padding: 1.5rem 2rem;
             border-radius: 12px;
-            border-right: 5px solid var(--primary-color); 
-            text-align: center; /* CENTERED CONTENT WITHIN STEP BOX */
+            /* Changed border side to left for better RTL flow of steps */
+            border-left: 5px solid var(--primary-color); 
+            text-align: center; 
         }
 
         .step-item h2 {
@@ -108,13 +121,13 @@
             display: flex;
             align-items: center;
             font-weight: bold;
-            justify-content: center; /* CENTERED THE STEP TITLE AND NUMBER */
+            justify-content: center; 
         }
         
         .step-item h2 span {
             font-size: 2.2rem;
             font-weight: 900;
-            margin-right: 1rem; /* Changed margin-left to margin-right for RTL centering */
+            margin-left: 1rem; /* Adjust margin for RTL */
             color: var(--highlight-red); 
         }
 
@@ -124,32 +137,13 @@
             max-width: none;
             line-height: 1.8;
             color: #ddd;
-            text-align: center; /* CENTERED THE PARAGRAPH TEXT */
+            text-align: center; 
         }
         
-        /* --- CONCLUSION BOX --- */
-        .conclusion-box {
-            background: linear-gradient(135deg, rgba(0, 191, 255, 0.1), rgba(0, 191, 255, 0.05));
-            padding: 2.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--primary-color);
-            margin: 5rem auto 0 auto; /* CENTERED THE CONCLUSION BLOCK */
-            text-align: center;
-            max-width: 700px;
-        }
-        
-        .conclusion-box p {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: var(--text-color);
-            margin: 0 auto;
-            max-width: 700px;
-        }
-
         /* --- FUTURE FEATURE STYLING --- */
         .future-vision {
             padding-top: 3rem;
-            margin: 2rem auto 0 auto; /* CENTERED THE FUTURE VISION BLOCK */
+            margin: 5rem auto 0 auto; 
             border-top: 1px dashed #333;
             max-width: 700px;
         }
@@ -160,8 +154,23 @@
             margin: 0 auto;
         }
 
+        /* --- EFFECTIVENESS SECTION --- */
+        .effectiveness {
+            margin-top: 5rem;
+            text-align: right;
+            border-top: 1px dashed #333;
+            padding-top: 2rem;
+        }
 
-        /* --- FOOTER STYLING (Simple and Small for a Content Page) --- */
+        .effectiveness p {
+            text-align: center;
+            margin: 1.5rem auto;
+            max-width: 700px;
+            font-size: 1.2rem;
+        }
+
+
+        /* --- FOOTER STYLING --- */
         .site-footer {
             margin-top: auto; 
             background-color: var(--dark-gray); 
@@ -189,58 +198,87 @@
 <body>
 
     <main>
-        <h1>صعود چطور کار می‌کنه؟</h1>
+        <h1>مکانیزم صعود</h1>
         
         <p class="intro-p">
-            صعود به اراده‌ی تو وابسته نیست. ما با یک سیستم هوشمند، از قوی‌ترین اهرم روانشناسی استفاده می‌کنیم: ترس از دست دادن پول واقعی. این سیستم در ۴ گام ساده، تعهد تو رو ضمانت می‌کنه.
+            صعود یک سیستم تضمین تعهد است که از قدرت مالی برای تقویت اراده استفاده می‌کند. در این ۶ گام، نحوه کارکرد دقیق برنامه و دلیل اثربخشی آن توضیح داده شده است.
+        </p>
+        
+        <h2 class="section-header">کیف پول داخلی و مدیریت وثیقه</h2>
+        
+        <p class="intro-p" style="margin-bottom: 3rem;">
+            تمام امور مالی و وثیقه‌گذاری در صعود از طریق یک <strong class="highlight">کیف پول داخلی</strong> انجام می‌شود. شما می‌توانید به راحتی حساب خود را شارژ (واریز) کنید و در صورت <strong class="highlight">پشت سر گذاشتن چالش‌ها،</strong> مبلغ برنده شده را به همراه وثیقه اصلی، <strong class="highlight">برداشت (Withdraw)</strong> نمایید. مبلغ وثیقه برای هر چالش از این کیف پول کسر می‌شود.
         </p>
 
+        <h2 class="section-header">۶ گام برای شروع یک چالش</h2>
+        
         <div class="mechanism-steps">
             
             <div class="step-item">
-                <h2><span>۱.</span> قرارداد با خودت</h2>
+                <h2><span>۱.</span> انتخاب برنامه هدف</h2>
                 <p>
-                    <strong class="highlight">برنامه</strong> و <strong class="highlight">محدودیت زمانی</strong> رو مشخص می‌کنی. مثلاً: «می‌خوام در ۲۴ ساعت آینده، بیشتر از ۳۰ دقیقه از اینستاگرام استفاده نکنم.» این یک تعهد شفاف و قابل اندازه‌گیریه.
+                    از لیست برنامه‌های نصب شده، <strong class="highlight">برنامه مورد نظر</strong> را که قصد محدود کردن آن را دارید (مثلاً اینستاگرام یا یوتیوب) انتخاب می‌کنید.
                 </p>
             </div>
 
             <div class="step-item">
-                <h2><span>۲.</span> گرو گذاشتن لنگر</h2>
+                <h2><span>۲.</span> تعیین مبلغ وثیقه (Stake)</h2>
                 <p>
-                    مبلغی رو که دوست داری به عنوان <strong class="highlight-red">لنگر روانی</strong> عمل کنه، گرو می‌ذاری. مهم نیست مبلغ چقدره؛ مهم تأثیر روانشناختی باختن اونه. این پول، ضمانت اجرایی قرارداد تو با خودته.
+                    مبلغی از <strong class="highlight">کیف پول</strong> خود را به عنوان وثیقه یا گرو (Stake) انتخاب می‌کنید. (مثلاً ۱۰,۰۰۰ تومان). این مبلغ باید به اندازه‌ای باشد که <strong class="highlight-red">ترس از دست دادن آن،</strong> از وسوسه‌ی استفاده قوی‌تر باشد.
                 </p>
             </div>
 
             <div class="step-item">
-                <h2><span>۳.</span> پایش هوشمند</h2>
+                <h2><span>۳.</span> تعریف سقف استفاده</h2>
                 <p>
-                    چالش شروع می‌شه. صعود به صورت کاملاً خودکار، میزان استفاده تو از اون برنامه خاص رو پایش می‌کنه. دیگه نیازی به عذاب وجدان یا محاسبه دستی نداری. سیستم، بدون قضاوت، ناظر تعهد توست.
+                    محدودیت زمانی مجاز برای استفاده از برنامه انتخابی را در طول مدت چالش تعیین می‌کنید. (مثلاً حداکثر <strong class="highlight">۱۵ دقیقه</strong> استفاده در طول روز).
+                </p>
+            </div>
+
+            <div class="step-item">
+                <h2><span>۴.</span> تعیین زمان و مدت چالش</h2>
+                <p>
+                    <strong class="highlight">زمان پایان چالش</strong> را مشخص می‌کنید (مثلاً امشب ساعت ۱۲:۰۰ یا تا ۷ روز آینده). صعود، پایش را از لحظه شروع تا لحظه پایان فعال می‌کند.
                 </p>
             </div>
             
             <div class="step-item">
-                <h2><span>۴.</span> نتیجه‌ی قطعی</h2>
+                <h2><span>۵.</span> فعال‌سازی «لغو اضطراری»</h2>
                 <p>
-                    <strong class="highlight">اگه محدودیت رو بشکنی:</strong> سیستم شکست رو ثبت می‌کنه و پول گرو گذاشته شده <strong class="highlight-red">از دست می‌ره</strong>. (درد باخت، قوی‌تر از لذت اسکرول کردن بود).
-                    <br>
-                    <strong class="highlight">اگه موفق شی:</strong> کل مبلغ بلافاصله بهت برمی‌گرده و مهم‌تر از همه، <strong class="highlight">اراده‌ی خودت رو قوی‌تر کردی.</strong>
+                    یک گزینه برای فعال/غیرفعال کردن قابلیت <strong class="highlight-red">«لغو در حین چالش»</strong> وجود دارد. اگر این گزینه فعال باشد، شما می‌توانید چالش را در هر لحظه متوقف کنید، اما <strong class="highlight-red">وثیقه خود را از دست خواهید داد.</strong> (این قابلیت ریسک را کاهش می‌دهد، اما از قدرت تعهد می‌کاهد).
+                </p>
+            </div>
+            
+            <div class="step-item">
+                <h2><span>۶.</span> محاسبه و نتیجه نهایی</h2>
+                <p>
+                    پس از رسیدن به زمان پایان، اگر میزان استفاده شما <strong class="highlight-red">بیشتر از حد مجاز</strong> بود، وثیقه شما <strong class="highlight-red">از دست می‌رود.</strong> اگر در محدوده‌ی مجاز باقی ماندید، کل مبلغ وثیقه <strong class="highlight">به کیف پول شما باز می‌گردد.</strong>
                 </p>
             </div>
 
         </div>
         
-        <!-- NEW SECTION: FUTURE VISION -->
+        <h2 class="section-header effectiveness">چرا این روش قطعی و موثر است؟</h2>
+        
+        <p>
+            روش صعود یک **«فناوری تعهد»** مبتنی بر علم روانشناسی است. این روش بر اساس دو اصل قدرتمند عمل می‌کند که اراده ضعیف شما را دور می‌زنند:
+        </p>
+        
+        <p>
+            ۱. <strong class="highlight">تنفر از باخت (Loss Aversion):</strong> مغز انسان، درد <strong class="highlight-red">از دست دادن مبلغ مالی</strong> را دو برابر لذت کوتاه مدت اسکرول کردن در شبکه‌های اجتماعی حس می‌کند. صعود، یک <strong class="highlight-red">هزینه غرق‌شده (Sunk Cost)</strong> واقعی ایجاد می‌کند که در لحظه‌ی وسوسه، فعال می‌شود و شما را عقب می‌راند.
+        </p>
+        
+        <p>
+            ۲. <strong class="highlight">قرارداد تعهد (Commitment Device):</strong> ما با خودمان قرارداد می‌بندیم که امروز بیشتر درس بخوانیم، اما در لحظه‌ی عمل شکست می‌خوریم. صعود، یک <strong class="highlight">مکانیزم بیرونی قاطع</strong> است که وظیفه‌ی تصمیم‌گیری را از اراده لحظه‌ای شما می‌گیرد و آن را به یک قانون محکم تبدیل می‌کند. این روش تضمین می‌کند که تصمیم شما در حالت منطقی، در حالت وسوسه نیز اجرا شود.
+        </p>
+        
+        <!-- FUTURE VISION -->
         <div class="future-vision">
             <p>
                 <strong class="highlight">چشم‌انداز صعود:</strong> در حال حاضر، صعود فقط برای ترک عادت‌های موبایلی به شما کمک می‌کنه. اما به زودی، قابلیت‌های جدیدی مثل ترک <strong class="highlight">عادت‌های غذایی</strong>، <strong class="highlight">ورزش روزانه</strong>، و <strong class="highlight">ساعات خواب منظم</strong> به برنامه اضافه خواهند شد تا صعود، تضمین‌کننده تمام اهداف شما باشه.
             </p>
         </div>
         
-        <div class="conclusion-box">
-            <p>
-                صعود، به جای اینکه ازت بخواد با اراده بجنگی، کاری می‌کنه که <strong class="highlight">مغزت به نفع خودت تصمیم بگیره.</strong>
-            </p>
-        </div>
     </main>
 
     <footer class="site-footer">
