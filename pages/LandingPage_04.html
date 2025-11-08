@@ -200,6 +200,52 @@
             color: #444; 
             margin: 0 0.2rem;
         }
+
+                            /* --- CTA BUTTON STYLING (NEW) --- */
+        .cta-button {
+            display: inline-block;
+            background-color: #00BFFF;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+            font-weight: bold;
+            margin-top: 4rem; /* Space from status message above */
+            margin-bottom: 3rem; /* Final bottom margin for separation from footer */
+            margin-left: auto;
+            margin-right: auto;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
+        }
+                /* --- STATUS MESSAGE STYLING (Replaces CTA Button) --- */
+        .status-message {
+            color: #c8d1db;
+            padding: 10px 25px; 
+            border: 2px solid #333; 
+            border-radius: 50px;
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            background-color: #00172D; 
+            font-weight: bold;
+            margin-top: 1rem; /* Space from description paragraph above */
+            margin-bottom: 2rem; /* Let the button handle the spacing below */
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            text-decoration: none; /* no underline */
+        }
+        a
+        {
+            text-decoration: none; /* no underline */
+        }
+
+        footer a {
+            color: #aaa;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        footer a:hover { color: var(--primary-color); }
     </style>
 </head>
 <body>
@@ -294,25 +340,33 @@
                     تو با خودت قرارداد می‌بندی تا بهتر شی. <span class="highlight">صعود</span>، قلم و کاغذ این تعهد رو بهت می‌ده.
                 </p>
 
-                <a href="#" class="cta-button">
-                    دانلود اپلیکیشن صعود
-                </a>
+        <a href="api/PublicPages/track-download?page=LP04&variant=0&download=apk" class="cta-button">
+            دانلود صعود برای اندروید
+        </a>
+
+                <a href="/how-it-works"">
+            <div class="status-message">
+صعود چطور کار میکنه؟
+            </div>
+        </a>   
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="footer-content">
-            <p>&copy; 2023 صعود. تمام حقوق محفوظ است.</p>
-            <div class="footer-links">
-                <a href="#">تماس با ما</a>
-                <span class="separator">|</span>
-                <a href="#">سیاست حفظ حریم خصوصی</a>
-                <span class="separator">|</span>
-                <a href="#">شرایط استفاده</a>
-            </div>
+        <div style="height: 400px;">
+            <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=654722&Code=uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1' alt='' style='cursor:pointer' code='uCSlULcvwNaJA7Kj4jXP4lL9Yzlaj4T1'></a>
         </div>
-    </footer>
-    
+        <a href="/contact-us">تماس با ما</a>
+                        <span class="separator">|</span>
+        <a href="/TOS">قوانین و مقررات</a>
+                        <span class="separator">|</span>
+        <a href="/FAQ">سوالات متداول</a>
+                        <span class="separator">|</span>
+        <a href="/how-it-works">صعود چگونه کار میکند؟</a>
+        <br/>
+        <div style="height: 50px;"></div>
+        <span>&copy; ۲۰۲۵ صعود - برنامه‌ی تمرکز.</span>
+    </footer>    
 </body>
 </html>
